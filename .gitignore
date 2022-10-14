@@ -21,7 +21,7 @@ lib-cov
 # Coverage directory used by tools like istanbul
 coverage
 *.lcov
-
+    
 # nyc test coverage
 .nyc_output
 
@@ -102,3 +102,18 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Ignore Mac DS_Store files
+.DS_Store
+**/.DS_Store
+
+### VisualStudioCode ###
+.vscode/*      # Maybe .vscode/**/* instead - see comments
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+**/.history
