@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;500&display=swap');
 
+/* general styling */
 :root {
-    --background: hsla(55, 31%, 50%, .2);
     --nav-height: 10vh;
+    --color-primary: hsla(55, 31%, 50%, .2);
+    --color-secondary: hsla(55, 31%, 50%, .8);
+    --font-color-light: hsla(360, 100%, 100%, .8);
+    --font-color-heavy: hsla(360, 100%, 100%, .9);
 }
 
 *, *::before, *::after {
@@ -11,6 +15,11 @@
 
 html {
     scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 body {
@@ -25,20 +34,57 @@ body {
     flex-direction: column;
 }
 
+
+/* typography */
+.web-title {
+    font-family: 'Dancing Script', cursive;
+    color: var(--font-color-heavy);
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5em;
+}
+
+.title span {
+    font-weight: 300;
+    display: block;
+    font-size: .9em;
+}
+
+
+/* button */
+.button {
+    display: inline-block;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 100px;
+    padding: .5em 1.75em;
+}
+
+.button-accent {
+    color: var(--color-secondary);
+    border-color: var(--color-secondary);
+}
+
+.button-accent:hover,
+.button-accent:focus {
+    background: var(--color-secondary);
+    color: var(--font-color-light)
+}
+
 /* nav styling */
 header {
-    background: var(--background);
+    background: var(--color-primary);
     /* top: 0%; */
     text-align: center;
     position: sticky;
     z-index: 999;
     width: 100%;
     height: var(--nav-height);
-}
-
-.title {
-    font-family: 'Dancing Script', cursive;
-    color: hsla(360, 100%, 100%, .9);
 }
 
 .nav-toggle {
@@ -104,7 +150,7 @@ nav li {
 }
 
 nav a {
-    color: white;
+    color: var(--font-color-heavy);
     text-decoration: none;
     font-size: 1.2rem;
     text-transform: uppercase;
@@ -139,6 +185,10 @@ nav a:hover {
         grid-column: 2 / 3;
     }
     
+    .title {
+        font-size: 3.2rem;
+    }
+
     nav {
         position: relative;
         text-align: left;
@@ -190,21 +240,33 @@ nav a:hover {
 
 section {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 100vw;
     height: 100vh;
-    scroll-snap-align: start;
+    /* scroll-snap-align: start; */
+}
+
+.hero-container {
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .landing-page {
     background-image: url('./assets/Homepage.png');
     background-color: #333;
+    color: var(--font-color-light);
     background-blend-mode: multiply;
     background-size: cover;
+    background-position: center;
     display: flex;
-    justify-content: space-between;
-    /* place-items: center; */
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 17vh;
 }
 
 .about-page {
