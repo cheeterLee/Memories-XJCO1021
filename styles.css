@@ -1,9 +1,14 @@
 :root {
     --background: hsla(55, 31%, 50%, .2);
+    --nav-height: 10vh;
 }
 
 *, *::before, *::after {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -16,7 +21,6 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    
 }
 
 /* nav styling */
@@ -27,6 +31,7 @@ header {
     position: sticky;
     z-index: 999;
     width: 100%;
+    height: var(--nav-height);
 }
 
 .title {
@@ -117,17 +122,6 @@ nav a:hover {
     transition: opacity 250ms ease-in-out 250ms;
 }
 
-/* content */
-.content {
-    height: 100vh;
-    background-image: url('./assets/Homepage.png');
-    background-color: #333;
-    background-blend-mode: multiply;
-    background-size: cover;
-    display: gird;
-    place-items: center;
-}
-
 @media screen and (min-width: 800px) {
     .nav-toggle-label {
         display: none;
@@ -143,9 +137,6 @@ nav a:hover {
     }
     
     nav {
-    
-    
-    /* the following lines are not from my video, but add Edge support */
         position: relative;
         text-align: left;
         transition: none;
@@ -153,7 +144,6 @@ nav a:hover {
         background: none;
         top: initial;
         left: initial;
-    /* end Edge support stuff */
     
         grid-column: 3 / 4;
         display: flex;
@@ -192,3 +182,32 @@ nav a:hover {
         transform: scale(1,1);
     }
   }
+
+/* content styling */
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+.landing-page {
+    background-image: url('./assets/Homepage.png');
+    background-color: #333;
+    background-blend-mode: multiply;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    /* place-items: center; */
+}
+
+.about-page {
+    background-color: white;
+}
+
+.contact-page {
+    background-color: white;
+}
