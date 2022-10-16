@@ -4,7 +4,9 @@
 :root {
     --nav-height: 10vh;
     --color-primary: hsla(55, 31%, 50%, .2);
+    --color-mid: hsla(55, 31%, 50%, .5);
     --color-secondary: hsla(55, 31%, 50%, .8);
+    --color-background: #333;
     --font-color-light: hsla(360, 100%, 100%, .8);
     --font-color-heavy: hsla(360, 100%, 100%, .9);
 }
@@ -52,6 +54,11 @@ body {
     font-size: .9em;
 }
 
+p {
+    
+    margin-top: 0;
+    line-height: 1.5;
+}
 
 /* button */
 .button {
@@ -184,10 +191,6 @@ nav a:hover {
     .logo {
         grid-column: 2 / 3;
     }
-    
-    .title {
-        font-size: 3.2rem;
-    }
 
     nav {
         position: relative;
@@ -241,13 +244,14 @@ nav a:hover {
 section {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     width: 100vw;
     height: 100vh;
     /* scroll-snap-align: start; */
 }
 
+/* landing page */
 .hero-container {
     display: flex;
     justify-content: center;
@@ -258,7 +262,7 @@ section {
 
 .landing-page {
     background-image: url('./assets/Homepage.png');
-    background-color: #333;
+    background-color: var(--color-background);
     color: var(--font-color-light);
     background-blend-mode: multiply;
     background-size: cover;
@@ -269,8 +273,68 @@ section {
     padding-bottom: 17vh;
 }
 
+/* about page */
 .about-page {
-    background-color: white;
+    background-image: url('./assets/about-background.png');
+    background-color: var(--color-background);
+    background-blend-mode: multiply;
+    
+}
+
+.about-textbox {
+    background-color: var(--color-background);
+    padding: 4em;
+    width: 100vw;
+    outline: 2px solid var(--color-secondary);
+    outline-offset: -2.5em;
+    color: var(--font-color-light);
+    text-align: center;
+    position: relative;
+}
+
+.about-textbox h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--color-secondary);
+    top: 0.5em;
+    padding: 0 .3em;
+    font-size: 1.2rem;
+    font-weight: 900;
+    background: var(--color-background);
+}
+
+.about-textbox strong {
+    font-style: italic;
+}
+
+@media (min-width: 600px) {
+    .about-textbox h1 {
+        font-size: 1.6rem;
+        top: 0em;
+    }
+}
+
+@media (min-width: 800px) {
+    .about-textbox h1 {
+        font-size: 2rem;
+        top: -.3em;
+        color: var(--color-mid);
+    }
+
+    .about-textbox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 60vh;
+        text-align: left;
+        left: 5em;
+        top: -17em;
+        box-shadow: 0 0 4em 0 rgba(0, 0, 0, .5);
+        padding: 10% 7%;
+    }
 }
 
 .contact-page {
