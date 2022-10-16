@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <!-- navbar -->
-        <header>
+        <header class="nav-header">
             <div class="logo">
                 <!-- <img src="./assets/memories-logo.png" alt="website logo" class='logo-img' > -->
                 <h1 class="web-title">Memories</h1>
@@ -27,7 +27,7 @@
             <label for="nav-toggle" class="nav-toggle-label">
                 <span></span>
             </label>
-        </header>
+        </header class='nav-header'>
 
         <!-- content -->
         <!-- landing page -->
@@ -45,8 +45,8 @@
         <section id="about-page" class="about-page">
             <div class="about-textbox">
                 <h1>About this website</h1>
-                <p>I was once a mainland Chinese student who majored in Finance at National Central University(Taoyuan City),
-                    and I also annually took a trip to Taiwan between 2018 to 2020. This website displays scenary photos of Taiwan as well as
+                <p>I was once a mainland Chinese student who majored in Finance at National Central University(Taoyuan City), 
+                    also annually took a trip to Taiwan between 2018 to 2020. This website displays scenary photos of Taiwan as well as
                     entertainment recommendations according to my previous experience.
                 </p>
                 <p>
@@ -61,7 +61,46 @@
 
         <!-- portfolio page -->
         <section id="portfolio-page" class="portfolio-page">
-            <h1>Memories</h1>
+            <h1 class="web-title">Memories</h1>
+            <div class="card-list">
+                <article class="card">
+                    <header class='card-header'>
+                        <p>2018.7</p>
+                        <h2>Kaosiung City</h2>
+                        <img class="card-image" src="./assets/kaosiung1.png" alt="Kaosiung City Qijin Island">
+                    </header>
+                </article>
+                <article class="card">
+                    <header class='card-header'>
+                        <p>2018.8</p>
+                        <h2>Kenting</h2>
+                        <img class="card-image" src="./assets/kenting1.png" alt="Kenting highway">
+                    </header>
+                </article>
+                <article class="card">
+                    <header class='card-header'>
+                        <p>2019.9</p>
+                        <h2>Taoyuan City</h2>
+                        <img class="card-image" src="./assets/taoyuan1.png" alt="Nationnal Central University">
+                    </header>
+                </article>
+                <article class="card">
+                    <header class='card-header'>
+                        <p>2019.10</p>
+                        <h2>Taoyuan City</h2>
+                        <img class="card-image" src="./assets/taoyuan2.png" alt="Chongli District">
+                    </header>
+                </article>
+                <article class="card">
+                    <header class='card-header'>
+                        <p>2020.1</p>
+                        <h2>Taipei city</h2>
+                        <img class="card-image" src="./assets/taipei1.png" alt="National Taiwan University">
+                    </header>
+                </article>
+            </div>
+            <a href="#" class="button button-accent">Click to see more...</a>
+            </div>
         </section>
         <!-- contact page -->
         <section id="contact-page" class="contact-page">
