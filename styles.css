@@ -400,4 +400,76 @@ section {
 /* contact page */
 .contact-page {
     background-color: var(--color-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    position: absolute;
+    background-color: var(--color-mid);
+    width: 95%;
+    min-width: 420px;
+    padding: 35px 50px;
+    border-radius: 10px;
+    box-shadow: -1rem 0 3rem var(--color-background);
+}
+
+.form-container h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.form-container p {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+form {
+    width: 100%;
+    position: relative;
+    margin: 30px auto 0 auto;
+}
+
+.row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px 30px;
+    margin-bottom: 20px;
+}
+
+form label {
+    color: var(--font-color-heavy);
+}
+
+form textarea,
+form input {
+    width: 100%;
+    font-weight: 400;
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 1.2px solid var(--color-mid);
+    margin-top: 5px;
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+    border-color: red;
+}
+
+.button-submit {
+    background-color: var(--color-background);
+    color: var(--font-color-heavy);
+    display: block;
+    margin: 0 auto;
+}
+
+.button-submit:hover {
+    background-color: var(--font-color-heavy);
+    color: var(--color-background);
 }
