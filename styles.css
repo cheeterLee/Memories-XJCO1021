@@ -30,10 +30,11 @@ body {
     background: #222;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
+    overflow-x: hidden;
 }
 
 /* custmize scrollbar */
-/* body::-webkit-scrollbar {
+body::-webkit-scrollbar {
     width: 0.25rem;
 }
 
@@ -43,7 +44,7 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
     background: var(--color-secondary);
-} */
+}
 
 .container {
     display: flex;
@@ -442,7 +443,7 @@ section {
 }
 
 form {
-    width: 100%;
+    width: 80%;
     position: relative;
     margin: 30px auto 0 auto;
 }
