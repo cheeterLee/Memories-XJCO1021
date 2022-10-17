@@ -330,7 +330,7 @@ section {
     }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1300px) {
     .about-textbox h1 {
         font-size: 2rem;
         top: -.3em;
