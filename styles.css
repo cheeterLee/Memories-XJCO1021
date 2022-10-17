@@ -1,3 +1,4 @@
+/* import font style from google font */
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;500&display=swap');
 
 /* general styling */
@@ -472,4 +473,72 @@ input:focus {
 .button-submit:hover {
     background-color: var(--font-color-heavy);
     color: var(--color-background);
+}
+
+/* footer */
+footer {
+    width: 100vw;
+    height: auto;
+    background: var(--color-primary);
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+.footer-content h3 {
+    font-size: 1.2rem;
+}
+
+.socials,
+.links {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    font-size: 0.8rem;  
+}
+
+.socials li,
+.links li {
+    margin: 0 10px;
+}
+
+.socials a,
+.links a {
+    text-decoration: none;
+    color: var(--font-color-light);
+    
+}
+
+.socials a i {
+    font-size: 1.2rem;
+    transition: color .4s ease;
+}
+
+.socials a:hover i,
+.links a:hover {
+    color: aqua;
+}
+
+.footer-content p,
+.footer-bottom {
+    margin: 0 auto;
+    font-size: 0.8rem;
+    color: var(--font-color-light);
+    padding: 0.5em;
+}
+
+.footer-bottom {
+    text-align: center;
+}
+
+.footer-bottom span {
+    opacity: .4;
+    font-weight: 500;
 }
