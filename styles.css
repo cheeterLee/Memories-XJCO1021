@@ -526,6 +526,33 @@ footer {
     color: aqua;
 }
 
+.wechat {
+    position: relative;
+}
+
+.qrcode {
+    position: absolute;
+	z-index: 99;
+	top: -135px;
+	right: -28px;
+	width: 10rem;
+	max-width: none;
+	height: 10rem;
+	transform: scale(0);
+	transform-origin: bottom right;
+	opacity: 0;
+	border: .3125rem solid #0085ba;
+	border-radius: .25rem;
+	-webkit-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+}
+
+.wechat:hover .qrcode {
+	transform: scale(1);
+	opacity: 1;
+}
+
 .footer-content p,
 .footer-bottom {
     margin: 0 auto;
