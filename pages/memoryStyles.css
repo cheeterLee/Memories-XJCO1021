@@ -169,3 +169,55 @@ main {
         transition: opacity var(--transition-speed);
     }
 }
+
+/* content */
+.card {
+    color: var(--font-color-heavy);
+    background-image: url(../assets/taipeicard.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 10rem 0 0;
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.card-content {
+    --padding: 1.5rem;
+    padding: var(--padding);
+    background: linear-gradient(
+        hsl(0 0% 0% / 0),
+        hsl(20 0% 0% / 0.3) 20%,
+        hsl(0 0% 0% / 1)
+    );
+}
+
+.card-title {
+    position: relative;
+    width: max-content;
+}
+
+.card-title::after {
+    content: '';
+    position: absolute;
+    height: 4px;
+    left: calc(var(--padding) * -1);
+    bottom: 0;
+    width: calc(100% + var(--padding));
+    background: var(--color-secondary);
+}
+
+.button {
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--font-color-light);
+    background-color: var(--color-mid);
+    padding: 0.5em 1.25em;
+    border-radius: .25rem;
+}
+
+.button:hover,
+.button:focus {
+    background-color: var(--font-color-heavy);
+    color: var(--color-background);
+}
