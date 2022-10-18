@@ -7,9 +7,11 @@
     --color-primary: hsla(55, 31%, 50%, .2);
     --color-mid: hsla(55, 31%, 50%, .5);
     --color-secondary: hsla(55, 31%, 50%, .8);
+    --color-final: rgb(83, 80, 43);
     --color-background: #333;
     --font-color-light: hsla(360, 100%, 100%, .8);
     --font-color-heavy: hsla(360, 100%, 100%, .9);
+    --transition-speed: 600ms;
 }
 
 *, *::before, *::after {
@@ -26,6 +28,7 @@ img {
 }
 
 body {
+    padding:0;
     margin: 0;
     background: #222;
     font-family: 'Montserrat', sans-serif;
@@ -69,7 +72,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 p {
-    
     margin-top: 0;
     line-height: 1.5;
 }
@@ -147,7 +149,7 @@ p {
     top: 7px;
 }
 
-nav {
+.navbar {
     position: absolute;
     text-align: left;
     top: 100%;
@@ -159,18 +161,18 @@ nav {
     transition: transform 400ms ease-in-out;
 }
 
-nav ul {
+.navbar ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-nav li {
+.navbar li {
     margin-bottom: 1em;
     margin-left: 1em; 
 }
 
-nav a {
+.navbar a {
     color: var(--font-color-heavy);
     text-decoration: none;
     font-size: 1.2rem;
@@ -179,15 +181,15 @@ nav a {
     transition: opacity 100ms ease-in-out;
 }
 
-nav a:hover {
+.navbar a:hover {
     color: #000;
 }
 
-.nav-toggle:checked ~ nav {
+.nav-toggle:checked ~ .navbar {
     transform: scale(1, 1);
 }
 
-.nav-toggle:checked ~ nav a {
+.nav-toggle:checked ~ .navbar a {
     opacity: 1;
     transition: opacity 250ms ease-in-out 250ms;
 }
@@ -206,7 +208,7 @@ nav a:hover {
         grid-column: 2 / 3;
     }
 
-    nav {
+    .navbar {
         position: relative;
         text-align: left;
         transition: none;
@@ -221,21 +223,21 @@ nav a:hover {
         align-items: center;
     }
     
-    nav ul {
+    .navbar ul {
         display: flex;
     }
     
-    nav li {
+    .navbar li {
         margin-left: 3em;
         margin-bottom: 0;
     }
     
-    nav a {
+    .navbar a {
         opacity: 1;
         position: relative;
     }
     
-    nav a::before {
+    .navbar a::before {
         content: '';
         display: block;
         height: 5px;
@@ -248,7 +250,7 @@ nav a:hover {
         transition: transform ease-in-out 250ms;
     }
     
-    nav a:hover::before {
+    .navbar a:hover::before {
         transform: scale(1,1);
     }
   }
