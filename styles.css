@@ -766,24 +766,39 @@ main {
         hsl(20 0% 0% / 0.3) 20%,
         hsl(0 0% 0% / 1)
     );
-    transform: translateY(65%);
-    transition: transform 300ms ease;
-    transition-delay: 300ms;
 }
 
-.card-memories:hover .card-memories-content {
-    transform: translateY(0);
-    transition-delay: 300ms;
-}
+@media (hover) {
+    .card-memories-content {
+        transform: translateY(65%);
+        transition: transform 300ms ease;
+        transition-delay: 300ms;
+    }
 
-.card-memories-content > *:not(.card-memories-title) {
-    opacity: 0;
-    transition: opacity 300ms linear;
-}
+    .card-memories:hover .card-memories-content,
+    .card-memories:focus-within .card-memories-content {
+        transform: translateY(0);
+        transition-delay: 300ms;
+    }
 
-.card-memories:hover .card-memories-content > *:not(.card-memories-title) {
-    opacity: 1;
-    transition-delay: 300ms;
+    .card-memories:focus-within .card-memories-content {
+        transform: translateY(0);
+        transition-delay: 300ms;
+    }
+
+    .card-memories-content > *:not(.card-memories-title) {
+        opacity: 0;
+        transition: opacity 300ms linear;
+    }
+
+    .card-memories:hover .card-memories-content > *:not(.card-memories-title) {
+        opacity: 1;
+        transition-delay: 300ms;
+    }
+
+    .card-memories-title::after {
+        transform: scaleX(0);
+    }
 }
 
 .card-memories-title {
@@ -801,7 +816,6 @@ main {
     bottom: -2px;
     width: calc(100% + var(--padding));
     background: var(--color-secondary);
-    transform: scaleX(0);
     transition: transform 300ms ease;
     transform-origin: left;
 }
