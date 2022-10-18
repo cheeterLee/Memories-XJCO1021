@@ -840,6 +840,43 @@ main {
     color: var(--color-background);
 }
 
+/* taipei.html, kaosiung.html, kenting.html styling */
+.media-scroller {
+    --spacer: 1rem;
+    display: grid;
+    gap: var(--spacer);
+    grid-auto-flow: column;
+    grid-auto-columns: 30%;
+    padding: 0 var(--spacer) var(--spacer);
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+}
+
+.media-element {
+    display: grid;
+    grid-template-rows: min-content;
+    gap: var(--spacer);
+    padding: var(--spacer);
+    background: var(--color-mid);
+    border-radius: .25rem;
+    box-shadow: 0 0 4em 0 rgba(0, 0, 0, .5);
+}
+
+.media-element > img {
+    inline-size: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.snaps-inline {
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: var(--spacer);
+}
+
+.snaps-inline > * {
+    scroll-snap-align: start;
+}
+
 /* if the user prefers reduced-motion */
 @media (prefers-reduced-motion: reduce) {
     * {
