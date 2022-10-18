@@ -841,6 +841,15 @@ main {
 }
 
 /* taipei.html, kaosiung.html, kenting.html styling */
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .media-scroller {
     --spacer: 1rem;
     display: grid;
@@ -850,6 +859,30 @@ main {
     padding: 0 var(--spacer) var(--spacer);
     overflow-x: auto;
     overscroll-behavior-inline: contain;
+}
+
+.wrapper h1 {
+    color: var(--font-color-light);
+}
+
+.media-scroller::-webkit-scrollbar {
+    height: 0.25rem;
+}
+
+.media-scroller::-webkit-scrollbar-track {
+    background-color: black;
+}
+
+.media-scroller::-webkit-scrollbar-thumb {
+    background: var(--color-secondary);
+}
+
+.media-scroller::-webkit-scrollbar-thumb:hover {
+    background: var(--color-mid);
+}
+
+.media-scroller::-webkit-scrollbar:vertical {
+    display: none;
 }
 
 .media-element {
