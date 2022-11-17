@@ -421,7 +421,9 @@ section {
     align-items: center;
 }
 
-.form-container {
+
+
+/* .form-container {
     position: absolute;
     background-color: var(--color-mid);
     width: 95%;
@@ -488,7 +490,7 @@ input:focus {
 .button-submit:hover {
     background-color: var(--font-color-heavy);
     color: var(--color-background);
-}
+} */
 
 /* footer */
 footer {

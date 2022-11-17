@@ -7,7 +7,10 @@
     <title>Memories</title>
     <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="form.css">
+    <!-- jQuery imported -->
+    <script src="./scripts/jquery-3.6.1.min.js" defer></script>
+    <script src="./scripts/form.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -107,36 +110,72 @@
         <!-- contact page -->
         <section id="contact-page" class="contact-page">
             <div class="form-container">
-                <h1>GET IN TOUCH</h1>
-                <p>Have any questions or suggestions? Drop me a message XD!</p>
-                <form>
-                    <div class="row">
-                        <div class="column">
-                            <label for="name">Name:</label>
-                            <input type="text" id="name" placeholder="Johnson">
+                <h1>Wanna leave me a message?</h1>
+                <div class="progressbar">
+                    <div class="step">
+                        <p>Info</p>
+                        <div class="bullet">
+                            <span>1</span>
                         </div>
-                        <div class="column">
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" placeholder="123456@qq.com">
+                        <div class="check fa-solid fa-check"></div>
+                    </div>
+                    <div class="step">
+                        <p>Text</p>
+                        <div class="bullet">
+                            <span>2</span>
+                        </div>
+                        <div class="check fa-solid fa-check"></div>
+                    </div>
+                    <div class="step">
+                        <p>End</p>
+                        <div class="bullet">
+                            <span>3</span>
+                        </div>
+                        <div class="check fa-solid fa-check"></div>
+                    </div>
+                </div>
+                <form data-multi-step class="multi-step-form">
+                    <div class="form-card active" data-step>
+                        <h3 class="step-title">What should I call you?</h3>
+                        <h3 class="step-quote">Your information is safe ✌︎〔ツ〕ɔ</h3>
+                        <div class="form-group">
+                            <label for="fname">First Name: </label>
+                            <input type="text" id="fname" name="fname" placeholder="Johnson" />
+                        </div>
+                        <div class="form-group">
+                            <label for="lname">Last Name: </label>
+                            <input type="text" id="lname" name="lname" placeholder="Li" />
+                        </div>
+                        <button type="button" data-next>Next</button>
+                    </div>
+                    <div class="form-card hide" data-step>
+                        <h3 class="step-title">Your message here.</h3>
+                        <h3 class="step-quote">Really appreciate your feedback!</h3>
+                        <div class="form-group">
+                            <label for="subject">Subject: </label>
+                            <input type="text" id="subject" name="subject" placeholder="Your subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message: </label>
+                            <textarea name="message" id="message" rows="3" placeholder="Your text"></textarea>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" data-previous>Previous</button>
+                            <button type="button" data-next>Next</button>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="column">
-                            <label for="subject">Subject:</label>
-                            <input type="text" id="subject" placeholder="Your subject here">
+                    <div class="form-card hide" data-step>
+                        <h3 class="step-title">Submit here!</h3>
+                        <h3 class="step-quote">Leave an email so I can reach out to you :)</h3>
+                        <div class="form-group">
+                            <label for="subject">Email: </label>
+                            <input type="email" id="email" name="email" placeholder="123456@qq.com">
                         </div>
-                        <div class="column">
-                            <label for="phonenumber">Phone number:</label>
-                            <input type="tel" id="phonenumber" placeholder="12345670">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="column">
-                            <label for="message">Message:</label>
-                            <textarea id="message" rows="3"></textarea>
+                        <div class="btn-group">
+                            <button type="button" data-previous>Previous</button>
+                            <button type="submit" data-submit>Submit</button>
                         </div>
                     </div>
-                    <button class="button button-submit">Submit</button>
                 </form>
             </div>
         </section>
@@ -170,5 +209,6 @@
     </div>
     <!-- applying icons from fontawesome.com -->
     <script src="https://kit.fontawesome.com/b3973c6ae0.js" crossorigin="anonymous"></script>
+    
 </body>
 </html>
