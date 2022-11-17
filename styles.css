@@ -421,77 +421,6 @@ section {
     align-items: center;
 }
 
-
-
-/* .form-container {
-    position: absolute;
-    background-color: var(--color-mid);
-    width: 95%;
-    min-width: 420px;
-    padding: 35px 50px;
-    border-radius: 10px;
-    box-shadow: -1rem 0 3rem var(--color-background);
-}
-
-.form-container h1 {
-    font-size: 2.5rem;
-    text-align: center;
-}
-
-.form-container p {
-    position: relative;
-    margin: auto;
-    width: 100%;
-    text-align: center;
-    font-size: 1.2rem;
-}
-
-form {
-    width: 80%;
-    position: relative;
-    margin: 30px auto 0 auto;
-}
-
-.row {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 20px 30px;
-    margin-bottom: 20px;
-}
-
-form label {
-    color: var(--font-color-heavy);
-}
-
-form textarea,
-form input {
-    width: 100%;
-    font-weight: 400;
-    padding: 8px 10px;
-    border-radius: 5px;
-    border: 1.2px solid var(--color-mid);
-    margin-top: 5px;
-}
-
-textarea:focus,
-input:focus {
-    outline: none;
-    border-color: red;
-}
-
-.button-submit {
-    background-color: var(--color-background);
-    color: var(--font-color-heavy);
-    display: block;
-    margin: 0 auto;
-}
-
-.button-submit:hover {
-    background-color: var(--font-color-heavy);
-    color: var(--color-background);
-} */
-
 /* footer */
 footer {
     width: 100vw;
@@ -588,17 +517,49 @@ footer {
 }
 
 /* memories.html */
+
+/* sidebar */
+.loader {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: absolute;
+    background-color: #222;
+    z-index: 2;
+}
+
+.loader > div {
+    height: 10vw;
+    aspect-ratio: 1/1;
+    border: .75rem solid var(--color-final);
+    border-top-color: var(--color-secondary);
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    animation: spin 1.5s infinite linear;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
 main {
     margin-left: 5rem;
     padding: 3rem;
 }
 
-/* sidebar */
 .sidebar {
     position: fixed;
     background-color: var(--color-final);
     transition: 200ms ease;
-    z-index: 1000;
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;

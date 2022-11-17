@@ -10,66 +10,73 @@
     <link rel="stylesheet" href="../assets/twicon/twicon.css">
     <!--  the only stylesheet -->
     <link rel="stylesheet" href="../styles.css">
+    <script src="../scripts/jquery-3.6.1.min.js"></script>
+    <script src="../scripts/loaderMemories.js" defer></script>
 </head>
 <body>
-    <nav class="sidebar">
-        <ul class="sidebar-links">
-            <li class="sidebar-logo sidebar-item">
-                <a href="../index.html" class="sidebar-link">
-                    <span class="link-text logo-text">Memories</span>
-                    <i class="twicon-main-island"></i>
-                </a>
-            </li>
-            <li class='sidebar-item'>
-                <a href="./taipei.html" class="sidebar-link">
-                    <i class="twicon-taipei101"></i>
-                    <span class="link-text">Taipei</span>
-                </a>
-            </li>
-            <li class="sidebar-item">
-                <a href="./kaohsiung.html" class="sidebar-link">
-                    <i class="twicon-85tower"></i>
-                    <span class="link-text">Kaohsiung</span>
-                </a>
-            </li>
-            <li class="sidebar-item">
-                <a href="./kenting.html" class="sidebar-link">
-                    <i class="twicon-eluanbi-lh"></i>
-                    <span class="link-text">Kenting</span>
-                </a>
-            </li>
-            <li class="sidebar-item">
-                <a href="../index.html" class="sidebar-link">
-                    <i class="twicon-tunghai-uni"></i>
-                    <span class="link-text">Home</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <main>
-        <div class="card-memories-container">
-            <div class="card-memories card-memories1">
-                <div class="card-memories-content">
-                    <h2 class="card-memories-title">Tapei City</h2>
-                    <p class="card-memories-body">The mix of eastern and western culture.</p>
-                    <a href="./taipei.html" class="btn">See More</a>
+    <div class="loader">
+        <div></div>
+    </div>
+    <div class="memories-page-content">
+        <nav class="sidebar">
+            <ul class="sidebar-links">
+                <li class="sidebar-logo sidebar-item">
+                    <a href="../index.html" class="sidebar-link">
+                        <span class="link-text logo-text">Memories</span>
+                        <i class="twicon-main-island"></i>
+                    </a>
+                </li>
+                <li class='sidebar-item'>
+                    <a href="./taipei.html" class="sidebar-link">
+                        <i class="twicon-taipei101"></i>
+                        <span class="link-text">Taipei</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="./kaohsiung.html" class="sidebar-link">
+                        <i class="twicon-85tower"></i>
+                        <span class="link-text">Kaohsiung</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="./kenting.html" class="sidebar-link">
+                        <i class="twicon-eluanbi-lh"></i>
+                        <span class="link-text">Kenting</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="../index.html" class="sidebar-link">
+                        <i class="twicon-tunghai-uni"></i>
+                        <span class="link-text">Home</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <div class="card-memories-container">
+                <div class="card-memories card-memories1">
+                    <div class="card-memories-content">
+                        <h2 class="card-memories-title">Tapei City</h2>
+                        <p class="card-memories-body">The mix of eastern and western culture.</p>
+                        <a href="./taipei.html" class="btn">See More</a>
+                    </div>
+                </div>
+                <div class="card-memories card-memories2">
+                    <div class="card-memories-content">
+                        <h2 class="card-memories-title">Kaohsiung City</h2>
+                        <p class="card-memories-body">The economic centre of southern Taiwan.</p>
+                        <a href="./kaohsiung.html" class="btn">See More</a>
+                    </div>
+                </div>
+                <div class="card-memories card-memories3">
+                    <div class="card-memories-content">
+                        <h2 class="card-memories-title">Kenting</h2>
+                        <p class="card-memories-body">White sandy beaches, and bustling night market.</p>
+                        <a href="./kenting.html" class="btn">See More</a>
+                    </div>
                 </div>
             </div>
-            <div class="card-memories card-memories2">
-                <div class="card-memories-content">
-                    <h2 class="card-memories-title">Kaohsiung City</h2>
-                    <p class="card-memories-body">The economic centre of southern Taiwan.</p>
-                    <a href="./kaohsiung.html" class="btn">See More</a>
-                </div>
-            </div>
-            <div class="card-memories card-memories3">
-                <div class="card-memories-content">
-                    <h2 class="card-memories-title">Kenting</h2>
-                    <p class="card-memories-body">White sandy beaches, and bustling night market.</p>
-                    <a href="./kenting.html" class="btn">See More</a>
-                </div>
-            </div>
-        </div>
-    </main>
+        </main>
+    </div>
 </body>
 </html>

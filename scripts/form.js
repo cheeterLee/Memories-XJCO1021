@@ -35,6 +35,8 @@ multiStepForm.addEventListener("click", e => {
 
 multiStepForm.addEventListener("submit", e => {
   e.preventDefault()
+  // currentStep = 0
+  // showCurrentStep()
   setTimeout(() => {
     alert("Thanks for your message :)")
   }, 500)
