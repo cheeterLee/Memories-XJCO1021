@@ -194,7 +194,7 @@ p {
     transition: opacity 250ms ease-in-out 250ms;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1200px) {
     .nav-toggle-label {
         display: none;
     }
@@ -1034,4 +1034,14 @@ main {
     position: absolute;
     white-space: nowrap;
     width: 1px;
+}
+
+.scroll-back {
+    /* display: none; */
+    position: fixed;
+    bottom: 2rem;
+    right: 3rem;
+    color: var(--font-color-light);
+    cursor: pointer;
+    font-size: 1.2rem;
 }

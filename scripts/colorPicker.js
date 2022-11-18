@@ -14,7 +14,7 @@ const setTheme = () => {
         } 
     })
     // fallback for no :has() support
-    document.documentElement.className = theme
+    document.documentElement.className = activeTheme
 }
 
 colorThemes.forEach(theme => {
