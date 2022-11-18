@@ -255,6 +255,82 @@ p {
     }
   }
 
+/* color-picker */
+.color-picker {
+    margin: auto;
+}
+
+.color-picker > fieldset {
+    border: 0;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 3rem;
+}
+
+.color-picker input[type="radio"] {
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    outline: 3px solid var(--radio-color, currentColor);
+    outline-offset: 3px;
+    border-radius: 50%;
+}
+
+.color-picker input[type="radio"]:checked {
+    background-color: var(--radio-color);
+}
+
+.color-picker input[type="radio"]#brown {
+    --radio-color: hsla(55, 31%, 50%, .5);
+}
+
+.color-picker input[type="radio"]#blue {
+    --radio-color: hsla(203, 100%, 46%, 0.41);
+}
+
+.color-picker input[type="radio"]#green {
+    --radio-color: hsla(165, 100%, 30%, 0.5);
+}
+
+.brown,
+:root:has(#brown:checked) {
+    --nav-height: 10vh;
+    --color-primary: hsla(55, 31%, 50%, .2);
+    --color-mid: hsla(55, 31%, 50%, .5);
+    --color-secondary: hsla(55, 31%, 50%, .8);
+    --color-final: rgb(83, 80, 43);
+    --color-background: #333;
+    --font-color-light: #ffffffcc;
+    --font-color-heavy: hsla(360, 100%, 100%, .9);
+    --transition-speed: 600ms;
+}
+
+.blue,
+:root:has(#blue:checked) {
+    --nav-height: 10vh;
+    --color-primary: hsla(203, 100%, 46%, 0.23);
+    --color-mid: hsla(203, 100%, 46%, 0.41);
+    --color-secondary: hsla(203, 100%, 53%, 0.41);
+    --color-final: hsla(203, 100%, 22%, 0.41);
+    --color-background: #333;
+    --font-color-light: #ffffffcc;
+    --font-color-heavy: hsla(360, 100%, 100%, .9);
+    --transition-speed: 600ms;
+}
+
+.green,
+:root:has(#green:checked) {
+    --nav-height: 10vh;
+    --color-primary: hsla(165, 100%, 30%, 0.2);
+    --color-mid: hsla(165, 100%, 30%, 0.5);
+    --color-secondary: hsla(165, 100%, 30%, 0.52);
+    --color-final: hsla(165, 100%, 17%, 0.52)
+    --color-background: #333;
+    --font-color-light: #ffffffcc;
+    --font-color-heavy: hsla(360, 100%, 100%, .9);
+    --transition-speed: 600ms;
+}
+
 /* content styling */
 
 section {
@@ -948,4 +1024,14 @@ main {
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
 }

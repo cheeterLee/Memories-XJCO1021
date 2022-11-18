@@ -12,6 +12,7 @@
     <script src="./scripts/jquery-3.6.1.min.js" defer></script>
     <script src="./scripts/form.js" defer></script>
     <script src="./scripts/loaderMainPage.js" defer></script>
+    <script src="./scripts/colorPicker.js" defer></script>
 </head>
 <body>
     <div class="loader">
@@ -32,8 +33,23 @@
                     <li><a href="#portfolio-page">Memories</a></li>
                     <li><a href="#contact-page">Contact</a></li>
                     <li><a href="#">Explore</a></li>
-                </ul>
+                </ul>      
             </nav>
+            <form class="color-picker">
+                <fieldset>
+                    <legend class="visually-hidden">Picke a color theme</legend>
+                    <label for="brown" class="visually-hidden">brown</label>
+                    <input type="radio" name="theme" id="brown" checked>
+                    <label for="green" class="visually-hidden">green</label>
+                    <input type="radio" name="theme" id="green" checked>
+                    <label for="blue" class="visually-hidden">blue</label>
+                    <input type="radio" name="theme" id="blue" checked>
+                </fieldset>
+            </form>
+            <!-- color picker -->
+
+
+
             <label for="nav-toggle" class="nav-toggle-label">
                 <span></span>
             </label>
