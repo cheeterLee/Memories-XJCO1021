@@ -9,7 +9,7 @@
     --color-secondary: hsla(55, 31%, 50%, .8);
     --color-final: rgb(83, 80, 43);
     --color-background: #333;
-    --font-color-light: hsla(360, 100%, 100%, .8);
+    --font-color-light: #ffffffcc;
     --font-color-heavy: hsla(360, 100%, 100%, .9);
     --transition-speed: 600ms;
 }
@@ -809,11 +809,41 @@ main {
 /* taipei.html, kaosiung.html, kenting.html styling */
 .wrapper {
     width: 100vw;
-    height: 100vh;
+    /* height: 100vh; */
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: .5em;
+}
+
+.weather-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-card span {
+    color: var(--font-color-light);
+    font-size: 1rem;
+    padding-bottom: .5rem;
+    white-space: pre;
+}
+
+.filter-white {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(332deg) brightness(90%) contrast(100%);
+    display: inline;
+    margin: auto;
+    height: 2rem;
+    width: 2rem;
 }
 
 .media-scroller {
