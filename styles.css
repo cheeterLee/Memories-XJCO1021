@@ -20,6 +20,7 @@
 
 html {
     scroll-behavior: smooth;
+    height: 100%;
 }
 
 img {
@@ -34,6 +35,9 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
 }
 
 /* custmize scrollbar */
@@ -629,6 +633,8 @@ footer {
 main {
     margin-left: 5rem;
     padding: 3rem;
+    /* display: flex;
+    flex-direction: column; */
 }
 
 .sidebar {
@@ -767,9 +773,12 @@ main {
 
 /* memories page content */
 .card-memories-container {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 2em;
+    /* justify-content: center; */
+    /* align-items: center; */
 }
 
 .card-memories {
@@ -981,7 +990,7 @@ main {
 }
 
 /* for small screens */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
     .wrapper {
         display: flex;
         flex-direction: column;
@@ -1044,4 +1053,5 @@ main {
     color: var(--font-color-light);
     cursor: pointer;
     font-size: 1.2rem;
+    z-index: 999;
 }
