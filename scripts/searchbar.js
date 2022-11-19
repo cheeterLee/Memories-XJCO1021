@@ -19,9 +19,10 @@ searchBar.addEventListener('keyup', () => {
         let title = card.querySelector('.card-title')
         let text = card.querySelector('.card-text')
         if (title.innerText.toLowerCase().indexOf(input) > -1 || text.innerText.toLowerCase().indexOf(input) > -1) {
-            card.style.display = ''
+            // aligning elements after filtering
+            card.parentElement.style.display = ''
         } else {
-            card.style.display = 'none'
+            card.parentElement.style.display = 'none'
         }
     })
 })
