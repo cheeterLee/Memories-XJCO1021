@@ -108,7 +108,7 @@ body {
     transform: translate(-50%, -50%) scale(0);
     transition: 200ms ease-in-out;
     z-index: 10;
-    width: 70vw;
+    width: 80vw;
     max-width: 80%;
 }
 
@@ -145,12 +145,16 @@ body {
 }
 
 .shuffle {
+    /* display: none; */
     position: fixed;
     bottom: 3em;
     margin: 0 auto;
     z-index: 100;
 }
 
+.shuffle.active {
+    display: none;
+}
 
 /* footer */
 footer {

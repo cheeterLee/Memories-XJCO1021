@@ -1,14 +1,33 @@
-
-
 const modalTitle = document.querySelector('.modal-title')
 const modalBody = document.querySelector('.modal-body')
 
-// window.addEventListener('load', (e) => {
-//     console.log('page is loaded')
-//     updateInfo()
-//         .then(details => updateUI(details))
-//         .catch(err => console.log(err))
-// })
+window.addEventListener('load', (e) => {
+    console.log('page is loaded')
+    updateInfo()
+        .then(details => renderUI(details))
+        .catch(err => console.log(err))
+})
+
+const renderUI = async (details) => {
+    for (let detail of details) {
+        const { text, short, departureAirport, arivalAirport } = detail
+        let flight = document.createElement("div")
+        flight.innerHTML = `
+            <p class='text-warning'><i class="fa-solid fa-plane text-warning"></i> status: ${text}<p>
+            <p><span class='text-success'>From</span> ${departureAirport} <span class='text-success'>to</span> ${arivalAirport} - ${short}<p>
+        `
+        modalBody.appendChild(flight)
+    }
+
+    const today = new Date()
+    let dd = String(today.getDate()).padStart(2, '0')
+    let mm = String(today.getMonth() + 1).padStart(2, '0')
+    let yyyy = today.getFullYear()
+    const time = today.toLocaleTimeString()
+    modalTitle.innerText = `
+        Currently ${yyyy}.${mm}.${dd} ${time}
+    `
+}
 
 const getAirline = async () => {
     const options = {
@@ -39,7 +58,7 @@ const getAirline = async () => {
         }
     }
     
-    console.log(flights)
+    // console.log(flights)
     
     
     // return id of all flights of China Airline that landed in Taipei Taoyuan Airport
@@ -66,7 +85,7 @@ getInformation = async (id) => {
     const arivalAirport = destination.name
 
 
-    console.log(text, short, departureAirport, arivalAirport)
+    // console.log(text, short, departureAirport, arivalAirport)
 
     return { text, short, departureAirport, arivalAirport }
 
@@ -84,21 +103,7 @@ const updateInfo = async () => {
 
     await Promise.all(flightDetailsRequests)
 
-    console.log(details)
+    // console.log(details)
 
     return details      
-}
-
-updateInfo()
-
-const renderUI = async (details) => {
-    for (let detail of details) {
-        const { text, short, departureAirport, arivalAirport } = detail
-        let flight = documet.createElement('div')
-        div.innerHTML = `
-            <p><i class="fa-solid fa-plane"></i> status-${text}<p>
-            <p>From ${departureAirport} to ${arivalAirport} - ${short}<p>
-        `
-        modalBody.append(flight)
-    }
 }
