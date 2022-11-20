@@ -10,7 +10,7 @@
 const cards = [...document.querySelectorAll('.card')]
 const searchBar = document.getElementById('search-bar')
 
-console.log(cards)
+// console.log(cards)
 
 searchBar.addEventListener('keyup', () => {
     let input = searchBar.value.trim().toLowerCase()

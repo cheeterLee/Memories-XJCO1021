@@ -1,5 +1,15 @@
 
 
+const modalTitle = document.querySelector('.modal-title')
+const modalBody = document.querySelector('.modal-body')
+
+// window.addEventListener('load', (e) => {
+//     console.log('page is loaded')
+//     updateInfo()
+//         .then(details => updateUI(details))
+//         .catch(err => console.log(err))
+// })
+
 const getAirline = async () => {
     const options = {
         method: 'GET',
@@ -13,24 +23,28 @@ const getAirline = async () => {
     
     const { aircraft } = await response.json()
     
-    console.log(aircraft)
+    // console.log(aircraft)
     
     const flights = []
     
+    
     for (let flight of aircraft) {
         if (flight[13] === 'TPE') {
-            flights.push(flight)
+            flights.push(flight[0])
+
+            // will get a http status code of 429 if fetch more than 5 times
+            if (flights.length > 4) {
+                break
+            }
         }
     }
+    
     console.log(flights)
     
-    // return all flights of China Airline that landed in Taipei Taoyuan Airport
+    
+    // return id of all flights of China Airline that landed in Taipei Taoyuan Airport
     return flights
 }
-
-getAirline()
-
-// id = '2e43fa37'
 
 getInformation = async (id) => {
     const options = {
@@ -41,7 +55,7 @@ getInformation = async (id) => {
         }
     }
 
-    const response = await fetch(`https://flight-radar1.p.rapidapi.com/flights/detail?flight=2e43fa37`, options)
+    const response = await fetch(`https://flight-radar1.p.rapidapi.com/flights/detail?flight=${id}`, options)
 
     const { status, airport, airline } = await response.json()
 
@@ -59,4 +73,32 @@ getInformation = async (id) => {
 }
 
 
-// getInformation()
+const updateInfo = async () => {
+    const flights = await getAirline()
+    const details = []
+
+    const flightDetailsRequests = flights.map(async (flight, i) => {
+        let detail = await getInformation(flight)
+        details.push(detail)
+    })
+
+    await Promise.all(flightDetailsRequests)
+
+    console.log(details)
+
+    return details      
+}
+
+updateInfo()
+
+const renderUI = async (details) => {
+    for (let detail of details) {
+        const { text, short, departureAirport, arivalAirport } = detail
+        let flight = documet.createElement('div')
+        div.innerHTML = `
+            <p><i class="fa-solid fa-plane"></i> status-${text}<p>
+            <p>From ${departureAirport} to ${arivalAirport} - ${short}<p>
+        `
+        modalBody.append(flight)
+    }
+}
