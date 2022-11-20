@@ -639,7 +639,7 @@ main {
 
 .sidebar {
     position: fixed;
-    background-color: var(--color-final);
+    background-color: var(--color-mid);
     transition: 200ms ease;
     z-index: 1;
     display: flex;
