@@ -10,16 +10,22 @@
     <!-- <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="../explore.css">
     <!-- bootstrap css -->
-    <!-- <script src="../scripts/jquery-3.6.1.min.js" defer></script>
-    <script src="../scripts/loader.js" defer></script> -->
+    <script src="../scripts/jquery-3.6.1.min.js" defer></script>
+    <script src="../scripts/loader.js" defer></script>
     <script src="../scripts/modal.js" defer></script>
     <script src="../scripts/searchbar.js" defer></script>
+    <script src="../scripts/shuffleCards.js" defer></script>
 </head>
 <body>
-    <div class="wrapper text-center text-white">
-        <h2 class='text-white mt-5 mb-2' >Exploring the memoreies</h2><br>
-        <input class="searchbar" id="search-bar" type="text" placeholder="...serach">
-        
+    <div class="loader">
+        <div></div>
+    </div>
+    <div class="page-content wrapper text-center text-white">
+        <h2 class='text-white mt-5 mb-2' >Exploring the memoreies</h2>
+        <div class="search">
+            <input class="search-input" id="search-bar" type="text" placeholder="...serach">
+            <button class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>        
         <p>Charmed and wanna book a flight to Taiwan?<button type="button" class="btn btn-link modal-open" data-modal-target="#modal"> See all flights landed in TPE currently :)</button></p>
         <!-- Scrollable modal -->
         <!-- Vertically centered scrollable modal -->
@@ -46,7 +52,7 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-lg-4 col-sm-6" id="card-container">
+                <div class="card-container col-lg-4 col-sm-6">
                     <div class="card mb-3">
                         <img class="card-img-top image" src="../assets/kaosiung1.png" alt="" >
                         <div class="card-body">
@@ -59,7 +65,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6">
+                <div class="card-container col-lg-4 col-sm-6">
                     <div class="card mb-3">
                         <img class="card-img-top image" src="../assets/kaohsiung2.JPG" alt="" >
                         <div class="card-body">
@@ -72,7 +78,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6">
+                <div class="card-container col-lg-4 col-sm-6">
                     <div class="card mb-3">
                         <img class="card-img-top image" src="../assets/kaohsiung3.JPG" alt="" >
                         <div class="card-body">
@@ -85,7 +91,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6">
+                <div class="card-container col-lg-4 col-sm-6">
                     <div class="card mb-3">
                         <img class="card-img-top image" src="../assets/kaohsiung4.JPG" alt="" >
                         <div class="card-body">
@@ -99,7 +105,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-sm-6">
+                <div class="card-container col-lg-4 col-sm-6">
                     <div class="card mb-3">
                         <img class="card-img-top image" src="../assets/kaohsiung5.JPG" alt="" >
                         <div class="card-body">
@@ -113,7 +119,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-sm-6">
+                <div class="card-container col-lg-4 col-sm-6">
                     <div class="card mb-3">
                         <img class="card-img-top image" src="../assets/kaohsiung6.JPG" alt="" >
                         <div class="card-body">
@@ -129,7 +135,42 @@
             </div>
         </div>
 
+        <div class="shuffle-div">
+            <button type="button" class="shuffle btn btn-warning">Shuffle Images</button>
+        </div>
 
+        <!-- footer -->
+        <footer>
+            <div class="footer-content">
+                <h3 class="web-title">Memories</h3>
+                <p>Bring back those bittersweet memoreies...</p>
+                <ul class="socials">
+                    <li><a href="https://github.com/cheeterLee"><i class="fa-brands fa-github"></i></a></li>
+                    <li><a href="https://www.instagram.com/cheeter_lee/"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li>
+                        <a href="#" class="wechat">
+                            <i class="fa-brands fa-weixin"></i>
+                            <img class="qrcode" src="../assets/qrcode.png" alt="">
+                        </a>
+                    </li>
+                    <li><a href="https://portfolio-luothy21e-cheeterlee.vercel.app/"><i class="fa-solid fa-circle-user"></i></a></li>
+                </ul>
+                <ul class="links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#about-page">About</a></li>
+                    <li><a href="../index.html#portfolio-page">Memories</a></li>
+                    <li><a href="../index.html#contact-page">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>copyright &copy;2022 memories. Designed by <span>cheeterLee</span></p>
+            </div>
+        </footer>
+        <i class="scroll-back visually-hidden fa-solid fa-arrow-up"></i>
     </div>
+    </div>
+
+    <!-- applying icons from fontawesome.com -->
+    <script src="https://kit.fontawesome.com/b3973c6ae0.js" crossorigin="anonymous"></script>
 </body>
 </html>
