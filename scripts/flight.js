@@ -28,7 +28,7 @@ const getAirline = async () => {
     return flights
 }
 
-// getAirline()
+getAirline()
 
 // id = '2e43fa37'
 
@@ -59,4 +59,4 @@ getInformation = async (id) => {
 }
 
 
-getInformation()
+// getInformation()
