@@ -80,6 +80,13 @@ body::-webkit-scrollbar-thumb {
     height: 100%
 }
 
+.searchbar-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .search {
     display: flex;
     width: 100%;
@@ -92,18 +99,35 @@ body::-webkit-scrollbar-thumb {
 
 .search-input {
     border: 0;
-    width: 100%;
+    width: 70%;
+    height: 1.5rem;
+    outline: none;
+    background: var(--color-background);
+    border: 2px solid var(--color-mid);
+    border-radius: 3rem;
+    color: var(--font-color-light);
+    padding: 1.7em;
+    font-size: 1.2rem;
+    transition: 200ms ease;
+}
+
+.search-input:focus {
+    border: 3px solid aqua; 
 }
 
 .search-icon {
     background: 0;
     border: 0;
+    color: var(--font-color-light);
     cursor: pointer;
+    position: relative;
+    left: -2em;
 }
 
 
 .container {
     padding: 3rem;
+    /* background: #222 ; */
 }
 
 .image {
@@ -114,6 +138,7 @@ body::-webkit-scrollbar-thumb {
 
 .card {
     background-color: var(--color-mid);
+    box-shadow: -1rem 0 3rem var(--color-background);
 }
 
 .modal {
@@ -333,7 +358,7 @@ footer {
 .hamburger::after {
   width: 2em;
   height: 3px;
-  background: var(--color-secondary);
+  background: var(--color-mid);
   
   transition: transform 350ms ease-in-out, opacity 200ms linear;
 }
@@ -405,4 +430,14 @@ transform: rotate(90deg) translate(-6px);
     --font-color-light: #ffffffcc;
     --font-color-heavy: hsla(360, 100%, 100%, .9);
     --transition-speed: 600ms;
+}
+
+.btn-primary {
+    border: none;
+    background-color: var(--color-background);
+}
+
+.btn-primary:hover {
+    background-color: var(--font-color-light);
+    color: var(--color-background)
 }
