@@ -178,7 +178,9 @@
 }
 
 .form-group > input,
-.form-group > textarea {
+.form-group > textarea,
+.form-group > select {
+  font-family: 'Montserrat', sans-serif;
   border: 2px solid var(--color-primary);
   border-radius: .25em;
   outline: none;
@@ -187,10 +189,20 @@
   width: 20vw;
 }
 
+/* .form-group > .select-selected {
+  background-color: var(--color-primary);
+} */
+
 .form-group input:focus-within,
-.form-group textarea:focus-within {
+.form-group textarea:focus-within,
+.form-group select:focus-within {
   border: 3px solid rgb(210, 158, 16);
   border-radius: .5em;
+}
+
+.radio-group {
+  color: white;
+  margin-top: -1em;
 }
 
 .form-card button {

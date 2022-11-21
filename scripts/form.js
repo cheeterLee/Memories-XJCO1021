@@ -5,6 +5,21 @@ const progressBullets = [...document.querySelectorAll(".step .bullet")]
 const progressChecks = [...document.querySelectorAll(".step .check")]
 const submitButton = document.querySelector("[data-submit]")
 
+const radioGroup = document.querySelector('.radio-group')
+const choiceButtonFalse = document.getElementById('choice-no')
+const choiceButtonYes = document.getElementById('choice-yes')
+const emailContainer = document.querySelector('.email-container')
+
+// rendering the page depends on radio button checked
+radioGroup.addEventListener('click', e => {
+  if (e.target === choiceButtonFalse) {
+    emailContainer.classList.add('hide')
+  } else if (e.target === choiceButtonYes) {
+    emailContainer.classList.remove('hide')
+  }
+})
+
+// rendering the page according to step
 let currentStep = formSteps.findIndex(step => {
   return step.classList.contains("active")
 })
@@ -64,4 +79,3 @@ function showCurrentStep() {
     if (index === currentStep) check.classList.remove("active")
   })
 }
-
