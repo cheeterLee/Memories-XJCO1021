@@ -92,12 +92,34 @@ p {
     padding: .5em 1.75em;
 }
 
-.button-accent {
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .5em;
+}
+
+.button-weak {
+    display: inline-block;
+    font-size: 1.1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 100px;
+    padding: .5em 1.75em;
+}
+
+.button-accent,
+.button-weak {
     color: var(--color-secondary);
     border-color: var(--color-secondary);
 }
 
 .button-accent:hover,
+.button-accent:focus,
+.button-weak:hover,
 .button-accent:focus {
     background: var(--color-secondary);
     color: var(--font-color-light)
