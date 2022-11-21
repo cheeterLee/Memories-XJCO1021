@@ -130,7 +130,8 @@ body::-webkit-scrollbar-thumb {
 .container {
     padding: 2rem;
     margin-top: 0;
-    background: #222 ;
+    background: hsla(0, 0%, 23%, 1);
+    box-shadow: -1rem 0 3rem var(--color-background);
     border-radius: 2rem;
 }
 
