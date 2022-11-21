@@ -7,8 +7,8 @@
     <title>Explore</title>
     <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="../explore.css">
+    <link rel="stylesheet" href="../lightbox/css/lightbox.css">
     <!-- bootstrap css -->
     <script src="../scripts/jquery-3.6.1.min.js" defer></script>
     <script src="../scripts/loader.js" defer></script>
@@ -19,6 +19,8 @@
     <script src="../scripts/scrollBack.js" defer></script>
     <script src="../scripts/navToggle.js" defer></script>
     <script src="../scripts/colorPicker.js" defer></script>
+    <!-- lightbox.js -->
+    <script src="../lightbox/js/lightbox.js" defer></script>
 </head>
 <body>
     <div class="loader">
@@ -69,7 +71,7 @@
 
                 <div class="card-container col-lg-4 col-sm-6">
                     <div class="card mb-3">
-                        <img class="card-img-top image" src="../assets/kaosiung1.png" alt="Beach at Changjin Island" >
+                        <a href="../assets/kaosiung1.png" data-lightbox="taiwan-images" data-title="Photo by cheeterLee"><img class="card-img-top image" src="../assets/kaosiung1.png" alt="Beach at Changjin Island" ></a>
                         <div class="card-body">
                             <h5 class="card-title">Kaosiung</h5>
                             <p class="card-text">Beach at Changjin Island</p>
@@ -83,7 +85,7 @@
 
                 <div class="card-container col-lg-4 col-sm-6">
                     <div class="card mb-3">
-                        <img class="card-img-top image" src="../assets/taipei1.png" alt="Library of National Taiwan University" >
+                        <a href="../assets/taipei1.png" data-lightbox="taiwan-images" data-title="Photo by cheeterLee"><img class="card-img-top image" src="../assets/taipei1.png" alt="Library of National Taiwan University" ></a>
                         <div class="card-body">
                             <h5 class="card-title">Taipei</h5>
                             <p class="card-text">Library of National Taiwan University</p>
@@ -98,7 +100,7 @@
 
                 <div class="card-container col-lg-4 col-sm-6">
                     <div class="card mb-3">
-                        <img class="card-img-top image" src="../assets/kaohsiung2.JPG" alt="Wind turbine at Changjin Island" >
+                        <a href="../assets/kaohsiung2.JPG" data-lightbox="taiwan-images" data-title="Photo by cheeterLee"><img class="card-img-top image" src="../assets/kaohsiung2.JPG" alt="Wind turbine at Changjin Island" ></a>
                         <div class="card-body">
                             <h5 class="card-title">Taipei</h5>
                             <p class="card-text">Wind turbine at Changjin Island</p>
@@ -112,7 +114,7 @@
 
                 <div class="card-container col-lg-4 col-sm-6">
                     <div class="card mb-3">
-                        <img class="card-img-top image" src="../assets/taipei2.JPG" alt="At Taipei Train Station" >
+                        <a href="../assets/taipei2.JPG" data-lightbox="taiwan-images" data-title="Photo by cheeterLee"><img class="card-img-top image" src="../assets/taipei2.JPG" alt="At Taipei Train Station" ></a>
                         <div class="card-body">
                             <h5 class="card-title">Taipei</h5>
                             <p class="card-text">At Taipei Train Station</p>
@@ -126,7 +128,7 @@
 
                 <div class="card-container col-lg-4 col-sm-6">
                     <div class="card mb-3">
-                        <img class="card-img-top image" src="../assets/kaohsiung3.JPG" alt="Kaohsiung Meilidao Subway Station" >
+                        <a href="../assets/kaohsiung3.JPG" data-lightbox="taiwan-images" data-title="Photo by cheeterLee"><img class="card-img-top image" src="../assets/kaohsiung3.JPG" alt="Kaohsiung Meilidao Subway Station" ></a>
                         <div class="card-body">
                             <h5 class="card-title">Kaohsiung</h5>
                             <p class="card-text">Kaohsiung Meilidao Subway Station</p>
@@ -140,7 +142,7 @@
 
                 <div class="card-container col-lg-4 col-sm-6">
                     <div class="card mb-3">
-                        <img class="card-img-top image" src="../assets/taipei3.JPG" alt="Taipei Taoyuan International Airport" >
+                        <a href="../assets/taipei3.JPG" data-lightbox="taiwan-images" data-title="Photo by cheeterLee"><img class="card-img-top image" src="../assets/taipei3.JPG" alt="Taipei Taoyuan International Airport" ></a>
                         <div class="card-body">
                             <h5 class="card-title">Taipei</h5>
                             <p class="card-text">Taipei Taoyuan International Airport</p>
@@ -154,7 +156,7 @@
 
                 <div class="card-container col-lg-4 col-sm-6">
                     <div class="card mb-3">
-                        <img class="card-img-top image" src="../assets/kenting1.png" alt="Highway of Kenting" >
+                        <a href="../assets/kenting1.png" data-lightbox="taiwan-images" data-title="Photo by cheeterLee"><img class="card-img-top image" src="../assets/kenting1.png" alt="Highway of Kenting" ></a>
                         <div class="card-body">
                             <h5 class="card-title">Kenting</h5>
                             <p class="card-text">Highway of Kenting</p>
@@ -168,7 +170,7 @@
 
                 <div class="card-container col-lg-4 col-sm-6">
                     <div class="card mb-3">
-                        <img class="card-img-top image" src="../assets/kaohsiung4.JPG" alt="Sunset Changjin Island" >
+                        <a href="../assets/kaohsiung4.JPG" data-lightbox="taiwan-images" data-title="Photo by cheeterLee"><img class="card-img-top image" src="../assets/kaohsiung4.JPG" alt="Sunset Changjin Island" ></a>
                         <div class="card-body">
                             <h5 class="card-title">Kaohsiung</h5>
                             <p class="card-text">Sunset Changjin Island</p>
@@ -183,7 +185,7 @@
 
                 <div class="card-container col-lg-4 col-sm-6">
                     <div class="card mb-3">
-                        <img class="card-img-top image" src="../assets/kenting2.JPG" alt="Starbucks at Kenting" >
+                        <a href="../assets/kenting2.JPG" data-lightbox="taiwan-images" data-title="Photo by cheeterLee"><img class="card-img-top image" src="../assets/kenting2.JPG" alt="Starbucks at Kenting" ></a>
                         <div class="card-body">
                             <h5 class="card-title">Kenting</h5>
                             <p class="card-text">Starbucks at Kenting</p>
@@ -197,7 +199,7 @@
 
                 <div class="card-container col-lg-4 col-sm-6">
                     <div class="card mb-3">
-                        <img class="card-img-top image" src="../assets/kaohsiung5.JPG" alt="Boer Art District" >
+                        <a href="../assets/kaohsiung5.JPG" data-lightbox="taiwan-images" data-title="Photo by cheeterLee"><img class="card-img-top image" src="../assets/kaohsiung5.JPG" alt="Boer Art District" ></a>
                         <div class="card-body">
                             <h5 class="card-title">Kaohsiung</h5>
                             <p class="card-text">Boer Art District</p>
@@ -211,7 +213,7 @@
 
                 <div class="card-container col-lg-4 col-sm-6">
                     <div class="card mb-3">
-                        <img class="card-img-top image" src="../assets/kenting3.JPG" alt="Cycling on Kenting highway" >
+                        <a href="../assets/kenting3.JPG" data-lightbox="taiwan-images" data-title="Photo by cheeterLee"><img class="card-img-top image" src="../assets/kenting3.JPG" alt="Cycling on Kenting highway" ></a>
                         <div class="card-body">
                             <h5 class="card-title">Kenting</h5>
                             <p class="card-text">Cycling on Kenting highway</p>
@@ -225,7 +227,7 @@
 
                 <div class="card-container col-lg-4 col-sm-6">
                     <div class="card mb-3">
-                        <img class="card-img-top image" src="../assets/taipei4.JPG" alt="MJ Fresh Clothing store" >
+                        <a href="../assets/taipei4.JPG" data-lightbox="taiwan-images" data-title="Photo by cheeterLee"><img class="card-img-top image" src="../assets/taipei4.JPG" alt="MJ Fresh Clothing store" ></a>
                         <div class="card-body">
                             <h5 class="card-title">Taipei</h5>
                             <p class="card-text">MJ Fresh Clothing store</p>
@@ -239,7 +241,7 @@
 
                 <div class="card-container col-lg-4 col-sm-6">
                     <div class="card mb-3">
-                        <img class="card-img-top image" src="../assets/kenting5.JPG" alt="Bar on Kenting Street" >
+                        <a href="../assets/kenting5.JPG" data-lightbox="taiwan-images" data-title="Photo by cheeterLee"><img class="card-img-top image" src="../assets/kenting5.JPG" alt="Bar on Kenting Street" ></a>
                         <div class="card-body">
                             <h5 class="card-title">Kenting</h5>
                             <p class="card-text">Bar on Kenting Street</p>
@@ -253,7 +255,7 @@
 
                 <div class="card-container col-lg-4 col-sm-6">
                     <div class="card mb-3">
-                        <img class="card-img-top image" src="../assets/kenting4.JPG" alt="Eating spagetti on Kenting Street" >
+                        <a href="../assets/kenting4.JPG" data-lightbox="taiwan-images" data-title="Photo by cheeterLee"><img class="card-img-top image" src="../assets/kenting4.JPG" alt="Eating spagetti on Kenting Street" ></a>
                         <div class="card-body">
                             <h5 class="card-title">Kenting</h5>
                             <p class="card-text">Eating spagetti on Kenting Street</p>
@@ -267,7 +269,7 @@
 
                 <div class="card-container col-lg-4 col-sm-6">
                     <div class="card mb-3">
-                        <img class="card-img-top image" src="../assets/kaohsiung6.JPG" alt="Hotel view on 85 Tower" >
+                        <a href="../assets/kaohsiung6.JPG" data-lightbox="taiwan-images" data-title="Photo by cheeterLee"><img class="card-img-top image" src="../assets/kaohsiung6.JPG" alt="Hotel view on 85 Tower" ></a>
                         <div class="card-body">
                             <h5 class="card-title">Kenting</h5>
                             <p class="card-text">Hotel view on 85 Tower</p>
@@ -282,7 +284,7 @@
 
                 <div class="card-container col-lg-4 col-sm-6">
                     <div class="card mb-3">
-                        <img class="card-img-top image" src="../assets/taipei5.JPG" alt="Ximenting Taipei" >
+                        <a href="../assets/taipei5.JPG" data-lightbox="taiwan-images" data-title="Photo by cheeterLee"><img class="card-img-top image" src="../assets/taipei5.JPG" alt="Ximenting Taipei" ></a>
                         <div class="card-body">
                             <h5 class="card-title">Taipei</h5>
                             <p class="card-text">Ximenting Taipei</p>
@@ -296,7 +298,7 @@
 
                 <div class="card-container col-lg-4 col-sm-6">
                     <div class="card mb-3">
-                        <img class="card-img-top image" src="../assets/kenting6.JPG" alt="A drink named blue kenting" >
+                        <a href="../assets/kenting6.JPG" data-lightbox="taiwan-images" data-title="Photo by cheeterLee"><img class="card-img-top image" src="../assets/kenting6.JPG" alt="A drink named blue kenting" ></a>
                         <div class="card-body">
                             <h5 class="card-title">Kenting</h5>
                             <p class="card-text">A drink named blue kenting</p>
@@ -310,7 +312,7 @@
 
                 <div class="card-container col-lg-4 col-sm-6">
                     <div class="card mb-3">
-                        <img class="card-img-top image" src="../assets/kaohsiung7.JPG" alt="View on river of Kaohsiung" >
+                        <a href="../assets/kaohsiung7.JPG" data-lightbox="taiwan-images" data-title="Photo by cheeterLee"><img class="card-img-top image" src="../assets/kaohsiung7.JPG" alt="View on river of Kaohsiung" ></a>
                         <div class="card-body">
                             <h5 class="card-title">Kaohsiung</h5>
                             <p class="card-text">View on river of Kaohsiung</p>
@@ -325,7 +327,7 @@
 
                 <div class="card-container col-lg-4 col-sm-6">
                     <div class="card mb-3">
-                        <img class="card-img-top image" src="../assets/taipei6.JPG" alt="Taipei Liberty Square" >
+                        <a href="../assets/taipei6.JPG" data-lightbox="taiwan-images" data-title="Photo by cheeterLee"><img class="card-img-top image" src="../assets/taipei6.JPG" alt="Taipei Liberty Square" ></a>
                         <div class="card-body">
                             <h5 class="card-title">Taipei</h5>
                             <p class="card-text">Taipei Liberty Square</p>

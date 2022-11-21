@@ -1,11 +1,3 @@
-// $(document).ready(function() {
-//     $('#search-bar').on('keyup', function() {
-//         let value = $(this).val().trim().toLowerCase()
-//         $('#card-container .card').filter(function() {
-//             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-//         })
-//     })
-// })
 
 const cards = [...document.querySelectorAll('.card')]
 const searchBar = document.getElementById('search-bar')
