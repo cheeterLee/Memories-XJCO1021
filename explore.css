@@ -388,15 +388,15 @@ footer {
   
   
 .nav-open .hamburger {
-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
 .nav-open .hamburger::before {
-opacity: 0;
+    opacity: 0;
 }
 
 .nav-open .hamburger::after {
-transform: rotate(90deg) translate(-6px);
+    transform: rotate(90deg) translate(-6px);
 }
 
 .brown,

@@ -788,7 +788,8 @@ main {
 .twicon-85tower,
 .twicon-eluanbi-lh,
 .twicon-tunghai-uni,
-.twicon-main-island {
+.twicon-main-island,
+.twicon-xiaonanmen {
     font-size: 3rem;
     transition: var(--transition-speed);
 }
