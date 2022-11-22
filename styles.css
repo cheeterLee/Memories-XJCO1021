@@ -211,6 +211,37 @@ p {
     color: #000;
 }
 
+.memories-dropdown {
+    display: block;
+    position: relative;
+}
+
+
+.dropdown {
+    position: absolute;
+    display: none!important;
+    width: 100%;
+    top: 100%;
+    right: 3em;
+    flex-direction: column;
+    gap: 2em;
+    z-index: 1;
+}
+
+.dropdown::before {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    top: -10px;
+    left: 0;
+}
+
+/* .navbar > .main-list > .memories-dropdown:hover .dropdown{
+    display: block!important;
+} */
+
 .nav-toggle:checked ~ .navbar {
     transform: scale(1, 1);
 }
@@ -278,6 +309,36 @@ p {
     
     .navbar a:hover::before {
         transform: scale(1,1);
+    }
+
+    /* #dropdown {
+        display: flex;
+        flex-direction: column !important;
+        gap: 2em !important;
+    } */
+
+    .dropdown::before {
+        display: block;
+        content: "";
+        width: 100%;
+        height: 10px;
+        position: absolute;
+        top: -10px;
+        left: 0;
+    }
+
+    .memories-dropdown:hover #dropdown {
+        display: block;
+    }
+    
+    .navbar > .main-list > .memories-dropdown:hover .dropdown{
+        display: block!important;
+        flex-direction: column !important;
+        gap: 2em !important;
+    }
+
+    .navbar > .main-list > .memories-dropdown:hover .dropdown a {
+        list-style: none !important;
     }
   }
 
