@@ -10,10 +10,13 @@
     <link rel="stylesheet" href="../assets/twicon/twicon.css">
     <!--  the only stylesheet -->
     <link rel="stylesheet" href="../styles.css">
-    <script src="../scripts/jquery-3.6.1.min.js" defer></script>
+    <script src="../scripts/jquery-3.6.1.min.js" defer></script> 
     <script src="../scripts/loaderMemories.js" defer></script>
     <script src="../scripts/scrollBack.js" defer></script>
     <script src="../scripts/colorPicker.js" defer></script>
+    <script src="../scripts/modalMemories.js" defer></script>
+    <script src="//api.map.baidu.com/api?type=webgl&v=1.0&ak=S3blXonrpxfkmgrE2jLQ5GvPrdpCRjbN"></script>
+    <script src="../scripts/geography.js" defer></script>
 </head>
 <body>
     <div class="loader">
@@ -61,6 +64,20 @@
             </ul>
         </nav>
         <main>
+            <!-- modal -->
+            <p class="modal-quote">Interested in exploring different cities? <button class="modal-open" data-modal-target="#modal">Spot your current location on Baidu Map :)</button></p>
+            <div class="modal" id="modal">
+                <div class="modal-header">
+                  <div class="modal-title">Your Location on Baidu Map (Wait several secs for fetching XD)</div>
+                  <button data-close-button class="close-button">&times;</button>
+                </div>
+                <div class="modal-body" id="map">
+                  
+                </div>
+              </div>
+            <div id="overlay"></div>
+
+
             <div class="card-memories-container">
                 <div class="card-memories card-memories1">
                     <div class="card-memories-content">
@@ -85,7 +102,9 @@
                 </div>
             </div>
         </main>
-        <!-- <i class="scroll-back fa-solid fa-arrow-up"></i> -->
+        <i class="scroll-back fa-solid fa-arrow-up"></i>
     </div>
+
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=1.0&type=webgl&ak=S3blXonrpxfkmgrE2jLQ5GvPrdpCRjbN"></script>
 </body>
 </html>
