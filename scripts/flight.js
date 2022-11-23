@@ -3,12 +3,16 @@ const modalBody = document.querySelector('.modal-body')
 
 window.addEventListener('load', (e) => {
     console.log('page is loaded')
+    modalBody.innerHTML = `
+        <span>Fetching current flight informations...</span>
+    `
     updateInfo()
         .then(details => renderUI(details))
         .catch(err => console.log(err))
 })
 
 const renderUI = async (details) => {
+    modalBody.innerHTML = ''
     for (let detail of details) {
         const { text, short, departureAirport, arivalAirport } = detail
         let flight = document.createElement("div")

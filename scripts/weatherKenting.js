@@ -3,6 +3,9 @@ const weatherCard = document.querySelector('.weather-card')
 
 window.addEventListener('load', (e) => {
     console.log('page is loaded.')
+    weatherCard.innerHTML = `
+        <span>Fetching current weather in Kenting...</span>
+    `
     updateInfo()
         .then(data => updateUI(data))
         .catch(err => console.log(err))
