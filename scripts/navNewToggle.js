@@ -1,5 +1,3 @@
-const navNewToggle = document.querySelector('.nav-new-toggle')
-
-navNewToggle.addEventListener('click', () => {
+$('.nav-new-toggle').click(() => {
     document.body.classList.toggle('nav-new-open')
 })

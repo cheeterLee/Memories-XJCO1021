@@ -1,5 +1,5 @@
 $('.shuffle').click(() => {
-    console.log('start shuffling')
+    // console.log('start shuffling')
     let cards = $('.row > .card-container').remove().toArray()
     for (let i = 0; i < cards.length; i++) {
         let j = Math.floor(Math.random() * (i + 1))
