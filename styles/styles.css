@@ -963,15 +963,15 @@ main {
 }
 
 .card-memories1 {
-    background-image: url(./assets/taipeicard.jpg);
+    background-image: url(../assets/taipeicard.jpg);
 }
 
 .card-memories2 {
-    background-image: url(./assets/kaohsiungcard.png);
+    background-image: url(../assets/kaohsiungcard.png);
 }
 
 .card-memories3 {
-    background-image: url(./assets/kentingcard.jpg);
+    background-image: url(../assets/kentingcard.jpg);
     margin-bottom: 3em;
 }
 
@@ -1225,4 +1225,12 @@ main {
     cursor: pointer;
     font-size: 1.2rem;
     z-index: 999;
+}
+
+.draggable {
+    cursor: move;
+}
+
+.draggable.dragging {
+    opacity: .5;
 }
