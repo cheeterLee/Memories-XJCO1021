@@ -446,7 +446,7 @@ section {
 }
 
 .landing-page {
-    background-image: url('./assets/Homepage.png');
+    background-image: url('../assets/Homepage.png');
     background-color: var(--color-background);
     color: var(--font-color-light);
     background-blend-mode: multiply;
@@ -460,7 +460,7 @@ section {
 
 /* about page */
 .about-page {
-    background-image: url('./assets/about-background.png');
+    background-image: url('../assets/about-background.png');
     background-color: var(--color-background);
     background-size: cover;
     background-blend-mode: multiply;
