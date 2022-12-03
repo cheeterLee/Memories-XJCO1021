@@ -563,6 +563,8 @@ section {
     transition: .2s;
 }
 
+
+
 .card-header {
     padding-left: 1em;
 }
@@ -584,6 +586,23 @@ section {
 .card:not(:first-child) {
     margin-left: -130px;
 }
+
+/* .card:nth-child(2) {
+    transition-delay: 100ms;
+}
+
+.card:nth-child(3) {
+    transition-delay: 200ms;
+}
+
+.card:nth-child(4) {
+    transition-delay: 300ms;
+}
+
+.card:nth-child(5) {
+    transition-delay: 400ms;
+} */
+
 
 /* contact page */
 .contact-page {
@@ -1236,4 +1255,17 @@ main {
 
 .draggable.dragging {
     opacity: .5;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 2s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
 }
